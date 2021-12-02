@@ -1,12 +1,12 @@
 from util import *
-from int_code import IntCode
+from aoc2019.int_code import IntCode
 
 def parse_function(line):
     line = [int(x) for x in line.split(",")]
 
     return line
 
-data = load_and_parse(parse_function)[0]
+data = load_and_parse("data.txt", parse_function)[0]
 
 def part_one(data):
     comp = IntCode(data[:])
@@ -72,4 +72,4 @@ def part_two(data):
 
         print_screen(screen)
 
-part_two(data)
+# part_two(data)

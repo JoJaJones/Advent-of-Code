@@ -33,8 +33,8 @@
 #
 # validation_reqs = {
 #     BYR: number_validator((1920, 2002)),
-#     IYR: number_validator((2010, 2020)),
-#     EYR: number_validator((2020, 2030)),
+#     IYR: number_validator((2010, aoc2020)),
+#     EYR: number_validator((aoc2020, 2030)),
 #     PID: content_validator({range(9): "0987654321"}, 7),
 #     HGT: measure_validator(-2, {"cm": (150, 193), "in": (59, 76)}),
 #     HCL: content_validator({range(1): "#", range(1, 7): "abcdef1234567890"}, 7),
@@ -60,10 +60,10 @@
 #     if not (1920 <= byr <= 2002):
 #         return False
 #
-#     if not (2010 <= iyr <= 2020):
+#     if not (2010 <= iyr <= aoc2020):
 #         return False
 #
-#     if not (2020 <= eyr <= 2030):
+#     if not (aoc2020 <= eyr <= 2030):
 #         return False
 #
 #     hgt_measure = pass_dict["hgt"][-2:]
